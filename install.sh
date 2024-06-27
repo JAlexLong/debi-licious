@@ -16,16 +16,17 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 VERSION=0.1.4
-#APT_UTILS="curl git stow tmux htop btop cmatrix neofetch cava remmina nemo nmap ranger wireshark termshark mpv exa zoxide zsh"
-#FLATPAK_UTILS="spotify"
-BINARY_UTILS="tealdeer yt-dlp yt-fzf lobster pfetch brave-browser"
-BUILD_UTILS="rustup"
-BANNER=""
+
+# import list of tools to install
+source TOOLS
+
+# import custom banner
+source BANNER
 
 echo $BANNER
-echo '------------------------------------------'
-echo 'Welcome to my easy install script! (>^-^)>' 
-echo '------------------------------------------'
+echo '--------------------------------------------------'
+echo ' Welcome to my super cozy install script! (>^-^)>' 
+echo '--------------------------------------------------'
 echo -n 'Install the terminal junkie starter pack?™ (Y/n): ' 
 read confirm 
 if [[ $confirm == [Nn]* ]]; then
@@ -42,40 +43,37 @@ sudo apt -y upgrade
 # build binaries from source
 
 # Clone dotfiles from repo
-# check if .dotfiles exists
-if [[ -d "$HOME/.dotfiles" ]]; then
-	echo 'The directory "~/.dotfiles/" already exists.'
-	echo 'Would you like to use it anyway?'
-	echo "Well, too bad! I haven't developed that feature yet. >.>"
-	exit 1
-else
-	echo -n "Pull dotfiles from GitHub? (y/N): " 
-	read confirm
-	if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
-		cd $HOME
-		git clone https://github.com/jalexlong/.dotfiles.git ||
-			echo 'Could not pull dotfiles...' &&
-			echo 'Please check your internet connection.' &&
-			exit 1
-	fi
+
+echo -n "Pull debi-licious dotfiles and configs from GitHub? (y/N): " 
+read confirm
+if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
+    # check if .dotfiles exists
+    if [[ -d "$HOME/.dotfiles" ]]; then
+        echo 'The directory "~/.dotfiles/" already exists.'
+        echo 'Would you like to delete the existing .dotfiles directory? [y/N]'
+        read confirm
+
+    fi
+    git clone https://github.com/jalexlong/.dotfiles.git $HOME ||
+        echo 'Could not pull dotfiles. Check your connection.' &&
+        exit 1
 fi
 
 # Stow dotfiles
 echo '----------------------------'
 echo '      !!! WARNING !!!'
 echo '----------------------------'
-echo 'Continuing will overwrite any conflicting config files and assumes you are running this'
-echo 'on a fresh install of one of the supported operating systems.'
+echo 'Continuing will overwrite any conflicting config files and assumes you'
+echo 'are running this on a fresh install of one of the supported'
+echo 'operating systems.'
 echo
 echo '- Debian 12'
-echo '- Ubuntu 24.04'
-echo '- Pop!_OS'
 echo
 echo 'This action is PERMANENT and CANNOT BE UNDONE.'
 echo -n 'Continue? (y/N): '
 read confirm 
-if [[ $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
-	echo "Let's get to stowin'"
+if [[ $confirm == [yY]* ]]; then
+    echo "Let's get to stowin'"
     # for loop here instead
-	stow bash git tmux zsh
+    stow bash git tmux zsh
 fi

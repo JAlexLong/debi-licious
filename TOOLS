@@ -1,0 +1,133 @@
+# ---------------------------
+# apt tools
+# ---------------------------
+ack
+adb
+aircrack-ng
+android-sdk
+audacity
+bat
+#brave-browser # bin
+bsdutils
+btop
+build-essential
+cava
+cmatrix
+command-not-found
+cool-retro-term
+coreutils
+cowpatty
+cowsay
+curl
+dict
+dictionaries-common
+diffutils
+dirb
+#discord # bin
+#displaylink-driver # git
+espeak-ng
+espeak
+exa
+exif
+exifprobe
+ext3grep
+ext4magic
+extundelete
+fail2ban
+fd-find
+ffmpeg
+ffmpegthumbnailer
+flameshot
+flatpak
+fzf
+gimp
+git
+googler
+grep
+gzip
+hashcat
+hping3
+htop
+hydra-gtk
+hydra
+john
+less
+lolcat
+lynx
+mac-robber
+macchanger
+nemo
+neofetch
+netcat-openbsd
+nmap
+obs-plugins
+obs-studio
+openssl
+openvpn
+ophcrack-cli
+pixelize
+podman
+postgresql-16
+prettyping
+profanity
+python-is-python3
+python3
+qbittorrent
+qemu-utils
+qemu
+remmina
+ripgrep
+screenkey
+speech-dispatcher-audio-plugins
+speech-dispatcher-espeak-ng
+speech-dispatcher
+speedometer
+speedtest-cli
+stardict
+stow
+syncthing
+#tailscale # bin
+#telegram-desktop #bin
+termshark
+tmux
+toot
+tor
+tree
+tshark
+tty-clock
+#ueberzugpp # git
+ufw
+virt-manager
+#virtualenv # git
+#virtualenvwrapper-doc
+#virtualenvwrapper
+wget
+wine
+winetricks
+wireshark
+zoxide
+zsh-autosuggestions
+zsh-common
+zsh-syntax-highlighting
+zsh
+
+# ---------------------------
+# flatpak tools
+# ---------------------------
+com.github.iwalton3.jellyfin-media-player
+com.github.jmlich.geotagging
+com.heroicgameslauncher.hgl
+com.icons8.Lunacy
+com.jgraph.drawio.desktop
+com.orama_interactive.Pixelorama
+com.spotify.Client
+io.github.nokse22.asciidraw
+io.podman_desktop.PodmanDesktop
+org.blender.Blender
+org.famistudio.FamiStudio
+org.jupyter.JupyterLab
+org.kde.krita
+org.musescore.MuseScore
+org.nickvision.cavalier
+org.tildearrow.furnace
+org.upscayl.Upscayl
