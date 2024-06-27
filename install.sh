@@ -26,7 +26,7 @@ echo $BANNER
 echo '------------------------------------------'
 echo 'Welcome to my easy install script! (>^-^)>' 
 echo '------------------------------------------'
-echo -n 'Install the terminal junkie starter pack? (Y/n): ' 
+echo -n 'Install the terminal junkie starter pack?™ (Y/n): ' 
 read confirm 
 if [[ $confirm == [Nn]* ]]; then
     exit 1
