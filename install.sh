@@ -28,17 +28,18 @@ echo 'Welcome to my easy install script! (>^-^)>'
 echo '------------------------------------------'
 echo -n 'Install the terminal junkie starter pack? (Y/n): ' 
 read confirm 
-if [[ $confirm == '' || $confirm == [yY] || $confirm == [yY][eE][sS] ]]; then
-	# install apt utils
-	sudo apt -y update && 
-	sudo apt -y upgrade && 
-	#sudo apt -y install $APT_UTILS
-	# install flatpak
-	# install flatpak apps
-	# download binaries from github
-	# download source code from github
-	# build binaries from source
+if [[ $confirm == [Nn]* ]]; then
+    exit 1
 fi
+# install apt utils
+sudo apt -y update && 
+sudo apt -y upgrade 
+#sudo apt -y install $APT_UTILS
+# install flatpak
+# install flatpak apps
+# download binaries from github
+# download source code from github
+# build binaries from source
 
 # Clone dotfiles from repo
 # check if .dotfiles exists
